@@ -35,27 +35,27 @@ function Signup() {
   EnterKey(sing,"Enter")
 
   return (
-    <div className="badabox" >
+    <div className="bigbox" >
       <div className="formm" >
         <div className="divinpu">
-          <h1 >Signup</h1>
+          <h1 className="logg" >SIGN UP</h1>
 
-          <h6>UserName</h6>
+          <h6 className="h666">UserName</h6>
           <input className='inppu' type='text' placeholder="Enter your Name" value={name} onChange={(e) => setname(e.target.value)} />
 
-          <h6>Email</h6>
+          <h6 className="h666">Email</h6>
           <input className='inppu' type='text' placeholder="Enter your Name" value={email} onChange={(e) => setemail(e.target.value)} />
 
-          <h6>Password</h6>
-          <input className='inppu' type='text' placeholder="Enter your Name" value={pass} onChange={(e) => setpass(e.target.value)} />
+          <h6 className="h666">Password</h6>
+          <input className='inppu' type='password' placeholder="Enter your Name" value={pass} onChange={(e) => setpass(e.target.value)} />
         </div>
 
         <div className='bst' >
 
-          <Link className="bbtt"  onClick={sing}> Signup</Link>
+          <Link className="bbtt"  onClick={sing}>Sign up</Link>
         </div>
         <div className="crettt">
-          <Link className="crett" to="/Login">Login</Link>
+          <Link className="crett" to="/Login">Sign in</Link>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ const Footer = () => {
     return (
 
         <div className="footer container-fluid text-center">
-            <p>@Created By Ankesh & Jr.Shubham</p>
+            <p>@ 2023 JustSearch Created By Ankesh 37 & Jr.Shubham Vaishya</p>
         </div>
 
     )

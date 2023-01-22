@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { db } from "../components/firebase";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { FaStar } from "react-icons/fa";
+
 
 const ViewData = () => {
-  const parm = useParams();
+
 
   const [first, setfirst] = useState([]);
-  const [rating, setrating] = useState([]);
+
   const [data, setdata] = useState([]);
 
   useEffect(() => {
     db.collection("services")
-      .doc(parm.id)
-      .onSnapshot((tap) => setfirst(tap.data()));
+      .onSnapshot((tap) => setfirst(tap.docs.map((e) => (e.data()))))
   }, []);
 
   useEffect(() => {
@@ -32,18 +31,15 @@ const ViewData = () => {
               <div>
                 <img className="logoavta" src={e.background} />
                 <div className="boxxe">
-                <div className="logoo">
-                  <img className="logoop" src={e.logo}></img>
-                </div>
+                  <div className="logoo">
+                    <img className="logoop" src={e.logo}></img>
+                  </div>
                 </div>
                 <h3 className="webtitle">{e.title}</h3>
               </div>
 
               <div className="wsr container text-center">
-                {/* <div><Link className='minlink'>Totale services</Link></div>
-   <div> <Link className='minlink'> Reviews</Link></div>
-   <div><Link className='minlink'> About us</Link></div>
-   <div><Link className='minlink'> Contact us</Link></div> */}
+
                 <Tabs>
                   <TabList>
                     <Tab>Totale services</Tab>
@@ -54,43 +50,49 @@ const ViewData = () => {
                   </TabList>
 
                   <TabPanel>
-                    <div className="container">
-                      <div className=" cardss row">
-                        <div className=" imaggg col-lg-6">
-                          <img
-                            className="imagesd"
-                            src={first.image}
-                          />
+                    {first.map((e) => (
+                      <>
+                        <div className="container">
+                          <div className=" cardss row">
+                            <div className=" imaggg col-lg-6">
+                              <img
+                                className="imagesd"
+                                src={e.image}
+                              />
+                            </div>
+                            <div className="col-lg-6">
+                              <div>
+                                <h4>{e.title}</h4>
+                              </div>
+                              <br />
+
+                              <div>
+                                <p>
+                                  {e.details}
+                                </p>
+                              </div>
+
+                              <div>
+                                <h5>
+                                  {e.price}
+                                </h5>
+                              </div>
+                              <Link to={"tel:" + e.numb}> <button>Call</button> </Link>
+
+                            </div>
+                          </div>
                         </div>
-                        <div className="col-lg-6">
-                          <div>
-                            <h4>{first.title}</h4>
-                          </div>
-                          <br/>
-                
-                          <div>
-                            <p>
-                            {first.details}
-                            </p>
-                          </div>
-                        
-                          <div>
-                            <h5>
-                            {first.price}
-                            </h5>
-                          </div>
-                         <Link to={"tel:" + e.numb}> <button>Call</button> </Link>
-                       
-                        </div>
-                      </div>
-                    </div>
+                      </>
+                    ))}
                   </TabPanel>
                   <TabPanel>
                     <p>{e.Reviews}</p>
                   </TabPanel>
+
                   <TabPanel>
                     <p>{e.about}</p>
                   </TabPanel>
+
                   <TabPanel>
                     <p>
                       <a target="_blank" href={"tel:" + e.numb}>
@@ -98,6 +100,7 @@ const ViewData = () => {
                       </a>
                     </p>
                   </TabPanel>
+
                   <TabPanel>
                     <p>
                       <a target="_blank" href={e.link}>

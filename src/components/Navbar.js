@@ -29,7 +29,7 @@ const [first, setfirst] = useState('')
               <div className="container">
                 <div className="row">
                   <div className="col-md-12 text-center">
-                    <Link to='/'><img src=''/> <h3 className="animate-charcter">iEveEra</h3></Link>
+                    <Link to='/'><img src=''/> <h3 className="animate-charcter">Just Search</h3></Link>
                   </div>
                 </div>
               </div>

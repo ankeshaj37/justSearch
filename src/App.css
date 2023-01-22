@@ -13,7 +13,10 @@ body {
   margin: 0;
   padding: 0;
 }
+.buuut{
+  width:110px;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -74,10 +77,38 @@ body {
   margin: 20px;
 
 }
+.searchbtn {
+  background-color: black;
+  border-radius: 2px;
+ padding:8px;
+ margin: 3px;
+  color: white;
+  width: 100px;
 
+}
+.imff{
+  height: 100%;
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+.logdivv{
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+.imffs{
+ width: 100%;
+ align-items: center;
+ margin-top: 200px;
+ position: relative;
+}
 .sdd {
   width: 350px;
-  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 10PX;
 }
 .dds{
   width: 80px;
@@ -112,6 +143,8 @@ body {
   position: absolute;
 }
 
+
+
 .inputlogo {
   background-color: white;
   padding: 5px;
@@ -133,20 +166,7 @@ body {
 
 }
 
-.searchbtn {
-  background-color: rgb(83, 189, 238);
-  border-radius: 2px;
- padding:8px;
- margin: 3px;
-  color: black;
-  width: 100px;
 
-  
-}
-.soon{
-  font-family: 'pacifico';
-  color: red;
-}
 .soo{
   color: grey;
   text-align: center;
@@ -286,11 +306,13 @@ h1 {
   height: 200px;
   width: 250px;
   margin-top: 30px;
+  margin-left: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 10px;
 }
 .imoo:hover{
   transform: scale(1.3);
+  border-radius: 50px;
 }
 .imoos{
   height: auto;
@@ -315,7 +337,10 @@ h1 {
   margin-top: 10%;
 }
 .logname{
-  color: white;
+  color: black;
+}
+.namess{
+  margin-top: 40px;
 }
 .adds{
   background-color: #baccd07a;
@@ -330,7 +355,7 @@ h1 {
 .ssf{
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin: 20px;
-  height: auto;
+  height:275px;
   display: flex;
   justify-content: center;
  
@@ -376,16 +401,19 @@ h1 {
 }
 
 .navbar {
-  background-color:lightslategray;
+  background-color: rgb(89 173 205);
 }
-
+.soon{
+  font-family: 'pacifico';
+  color: rgb(97 192 227);
+}
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 .footer {
-  background-color:lightslategray;
+  background-color:black;
   padding: 10px;
   color: white;
  margin-top: auto
@@ -420,8 +448,8 @@ color: white;
   text-transform: uppercase;
   background-image: linear-gradient(-225deg,
       #f8b526 0%,
-      #ffffff 29%,
-      #f7e820 67%,
+      #f51111 29%,
+      #0f0f0f 67%,
       #fd4726 100%);
   background-size: auto auto;
   background-clip: border-box;
@@ -433,7 +461,7 @@ color: white;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size:35px;
+  font-size:30px;
   font-weight: 900;
 }
 
@@ -664,10 +692,8 @@ body{
   padding: 10px;
   width: 250px;
   margin-left: 20px;
-  background-color:gray;
+  background-color: rgb(214, 209, 209);
   border-style: none;
-  margin: 20px;
-
 
 }
 
@@ -684,29 +710,22 @@ body{
 
 .crett {
   text-align: center;
-  color: black;
+  color: white;
+  text-decoration: none;
 }
 
 .crettt {
   text-align: center;
-  margin-right: 10px;
+  margin-right: -1px;
   color: aliceblue;
+ 
 }
 
-
-
-.badabox {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
 .formm {
   border-radius: 10px;
-  background-color: #baccd07a;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+background-image: url(https://res.cloudinary.com/dgvvfn1gf/image/upload/v1674194904/New_Project_viampf.png);
+  background-size: cover;
   height: auto;
   padding: 30px;
   width: auto;
@@ -714,43 +733,44 @@ body{
 
 }
 .bbt {
-  background-color: black;
+  background-color: rgb(69, 196, 247);
   width: 100px;
   height: auto;
   margin-left: 70px;
-  border-radius: 20px;
   padding: 5px;
 }
 .bst{
-  margin-bottom:20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .bbtt{
-  background-color: black;
+  background-color: rgb(69, 196, 247);
   width: 100px;
   height: auto;
  padding: 10px;
  text-decoration: none;
-  border-radius: 20px;
   text-align: center;
-  color: wheat;
- 
+  color: black;
+
 }
 .lim {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .cret {
   text-align: center;
-  color: black;
-  margin-right:14px;
+  color:white;
+  margin-right:-5px;
+  text-decoration: none;
 }
+
 button {
   border: none;
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
-  background-color: #000;
+  color: black;
+  background-color: rgb(69, 196, 247) ;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -761,11 +781,12 @@ button:hover, a:hover {
   opacity: 0.7;
 }
 .logg {
-  color:black;
+  color:white;
+
 }
 
 .h666 {
-  color: black;
+  color: white;
   padding: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -1350,7 +1371,7 @@ fieldset {
 }
 .anker{
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .webtitle{
   text-align: center;
@@ -1399,6 +1420,7 @@ fieldset {
  height: 50px;
  display: flex;
  justify-content: center;
+
 
 }
 .wsr{
@@ -1667,4 +1689,264 @@ input[type="date"] {
 }
 .imagesss:hover{
   transform: scale(1.3);
+}
+
+
+
+
+/* ==========================================================================
+   #FONT
+   ========================================================================== */
+   .font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  .font-poppins {
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  .font-opensans {
+    font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  /* ==========================================================================
+     #GRID
+     ========================================================================== */
+  .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  .row .col-2:last-child .input-group-desc {
+    margin-bottom: 0;
+  }
+  
+  .row-space {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+  .row-refine {
+    margin: 0 -15px;
+  }
+  
+  .row-refine .col-3 .input-group-desc,
+  .row-refine .col-9 .input-group-desc {
+    margin-bottom: 0;
+  }
+  
+  .col-2 {
+    width: -webkit-calc((100% - 30px) / 2);
+    width: -moz-calc((100% - 30px) / 2);
+    width: calc((100% - 30px) / 2);
+  }
+  
+  @media (max-width: 767px) {
+    .col-2 {
+      width: 100%;
+    }
+  }
+  
+  .form-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  e
+  .form-row .name {
+    width: 125px;
+    color: #555;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .form-row .value {
+    width: -webkit-calc(100% - 125px);
+    width: -moz-calc(100% - 125px);
+    width: calc(100% - 125px);
+  }
+  
+  @media (max-width: 767px) {
+    .form-row {
+      display: block;
+    }
+    .form-row .name,
+    .form-row .value {
+      display: block;
+      width: 100%;
+      
+    }
+    .form-row .name {
+      margin-bottom: 7px;
+    }
+  }
+  
+  .col-3,
+  .col-9 {
+    padding: 0 15px;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+  }
+  
+  .col-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  @media (max-width: 767px) {
+    .col-3 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 35%;
+      -moz-box-flex: 0;
+      -ms-flex: 0 0 35%;
+      flex: 0 0 35%;
+      max-width: 35%;
+    }
+  }
+  
+  .col-9 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 75%;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  
+  @media (max-width: 767px) {
+    .col-9 {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 65%;
+      -moz-box-flex: 0;
+      -ms-flex: 0 0 65%;
+      flex: 0 0 65%;
+      max-width: 65%;
+    }
+  }
+  
+  
+
+  
+
+ 
+  /* ==========================================================================
+     #BUTTON
+     ========================================================================== */
+ 
+  
+ 
+  .btn--red {
+    background: #ff4b5a;
+  }
+  
+  .btn--red:hover {
+    background: #eb3746;
+  }
+  
+  
+  /* ==========================================================================
+     #FORM
+     ========================================================================== */
+  input {
+    outline: none;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  
+  
+
+  
+
+  
+  .input--style-5 {
+    background: #e5e5e5;
+    line-height: 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .input-group-desc {
+    position: relative;
+  }
+  
+  @media (max-width: 767px) {
+    .input-group-desc {
+      margin-bottom: 40px;
+    }
+  }
+  
+  .input-group {
+    position: relative;
+    margin: 0;
+  }
+  
+  .label {
+    color: #555;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  
+  .label--block {
+    width: 100%;
+  }
+  
+  .label--desc {
+    position: absolute;
+    text-transform: capitalize;
+    display: block;
+    color: #999;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 7px;
+    left: 0;
+  }
+  .labe{
+    text-align: center;
+  }
+
+  ::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+.buttp{
+  text-align: center;
+  background-color: rgb(102, 168, 243);
+ padding: 10px;
 }

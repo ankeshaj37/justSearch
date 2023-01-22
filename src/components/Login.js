@@ -37,15 +37,15 @@ EnterKey(Submission,'Enter')
 
 <div className="bigbox" >
       <div className="formm">
-        <h2 className="logg">LOGIN</h2><br/><br/>
+        <h2 className="logg">SIGN IN</h2><br/><br/>
           <h6 className="h666">Email</h6>
         <input className='inppu' onChange={(e)=>setEmail(e.target.value)} placeholder="Enter email address"/>
          <h6 className="h666" >Password</h6>
-        <input className='inppu' onChange={(e)=>setPassword(e.target.value)}  placeholder="Enter Password" />
+        <input className='inppu' type='password' onChange={(e)=>setPassword(e.target.value)}  placeholder="Enter Password" />
         <div className="buut" >
           
           <div  className="bbt">
-          <Link className="lim"  onClick={Submission} >Login</Link>
+          <Link className="lim"  onClick={Submission} >Sign in</Link>
           </div>
         
         </div>

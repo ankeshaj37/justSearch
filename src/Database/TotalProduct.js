@@ -32,14 +32,14 @@ const TotalProduct = () => {
     }
 
 
-    const edit =(uid)=>{
-db.collection('services').doc(uid).set()
-    }
+   
+
+
     return (
         <>
             <Dmenus />
 
-            {first
+           {first
                 .map((e) => (
                     <>
                         {e.data.uid == user.uid ?
@@ -58,7 +58,7 @@ db.collection('services').doc(uid).set()
 
                                                 <Link> <div ><AddAPhotoIcon />Images</div></Link>
                                                 <Link onClick={() => delet(e.uid)}> <div><DeleteIcon />Delete</div></Link>
-                                                <Link onClick={edit} > <div><BorderColorIcon  />Edit</div></Link>
+                                                <Link > <div><BorderColorIcon  />Edit</div></Link>
 
 
                                             </div>
@@ -69,8 +69,7 @@ db.collection('services').doc(uid).set()
                             </> : null
                         }
                     </>
-                ))}
-
+                ))} 
 
         </>
     )

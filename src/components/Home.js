@@ -31,7 +31,7 @@ const Home = () => {
         <button className="searchbtn">Search</button>
       </div>
       <h5 className="soo">Get ready! Something really cool is coming!</h5>
-      <h1 className="soon">Coming Soon</h1>
+     
 
       <div className="cc container">
         {first
@@ -46,50 +46,7 @@ const Home = () => {
           })
           .map((e, i) => (
             <>
-              {/* <div className=" dddk row" key={i} >
-                <div className=" imagepro col-lg-4">
-                  <img className='imagesss' src={e.data.image} alt="..." />
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <Link type='tel' className='linku'><div className='calld'><img src='https://img.icons8.com/ios-glyphs/512/ringer-volume.png' style={{ height: '30px' }} /> <h6 className='h6mobile'>{e.data.mobile}</h6></div></Link>
-                  <Link><div className='location'><img style={{ height: '100%' }} src='https://img.icons8.com/ios/512/place-marker.png' /></div></Link>
-                </div>
-                <div className="ddds col-lg-6">
-                  <div>
-                    <h5 className="card-text">{e.data.title}</h5>
-                    <div>Price : <h6>{e.data.price}</h6></div>
-                    <details>
-                      <summary>Details</summary>
-                      <p>{e.data.details}</p>
-                    </details>
-                    <p className=" buuu card-text"><small className="text-muted"><Link to={`/services/${e.uid}`} className='lkk'>Best Deal </Link></small></p>
-                    <div className=" ress">
-
-                      {[...Array(5)].map((star, i) => {
-                        const ratess = i + 1;
-                        return (
-
-                          <label>
-                            <input className="starin" type="radio" name="rating" onClick={() => setrating(ratess)} />
-                            <FaStar color={i++ < (rating) ? 'red' : 'blue'} className="star" size={20}
-
-
-                            />
-
-                          </label>
-
-                        );
-                      })}
-                      <div>
-                        <p>Thanks</p>
-                        <h2>{rating}</h2>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+             
 
               <div className=" container">
                 <div className=" ssf row">
@@ -100,7 +57,7 @@ const Home = () => {
                     <h4>{e.data.title}</h4>
                     <p className="detai">{e.data.details}</p>
                     <div className=" imooo ">
-                  <Link> <button> <h3><a className="anker" href={"tel:" + e.mobile}><h5>Call Now</h5></a></h3></button></Link>
+                  <button className="buuut"><a className="anker" href={"tel:" + e.data.mobile}>Call Now</a></button>
                 <Link to={`/services/${e.uid}`}  > <button>Best Deal</button></Link>
                     </div>
                     <div className=" ress">
