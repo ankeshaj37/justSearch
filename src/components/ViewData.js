@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { db } from "../components/firebase";
+import { auth, db } from "../components/firebase";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { onAuthStateChanged } from "firebase/auth";
 
 
 const ViewData = () => {
 
-
+  const [User, setUser] = useState([]);
   const [first, setfirst] = useState([]);
-
   const [data, setdata] = useState([]);
+
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+        setUser(user)
+    });
+}, [])
 
   useEffect(() => {
     db.collection("services")
-      .onSnapshot((tap) => setfirst(tap.docs.map((e) => (e.data()))))
+      .onSnapshot((tap) => setfirst(tap.docs.map((e) => ({uid:e.id,data:e.data()}))))
   }, []);
 
   useEffect(() => {
@@ -51,38 +58,43 @@ const ViewData = () => {
 
                   <TabPanel>
                     {first.map((e) => (
+
+     
                       <>
+                       {e.data.uid == User.uid ?
                         <div className="container">
                           <div className=" cardss row">
                             <div className=" imaggg col-lg-6">
                               <img
                                 className="imagesd"
-                                src={e.image}
+                                src={e.data.image}
                               />
                             </div>
                             <div className="col-lg-6">
                               <div>
-                                <h4>{e.title}</h4>
+                                <h4>{e.data.title}</h4>
                               </div>
                               <br />
 
                               <div>
                                 <p>
-                                  {e.details}
+                                  {e.data.details}
                                 </p>
                               </div>
 
                               <div>
                                 <h5>
-                                  {e.price}
+                                  {e.data.price}
                                 </h5>
                               </div>
-                              <Link to={"tel:" + e.numb}> <button>Call</button> </Link>
+                              <Link to={"tel:" + e.data.numb}> <button>Call</button> </Link>
 
                             </div>
                           </div>
                         </div>
+                            :''}
                       </>
+                  
                     ))}
                   </TabPanel>
                   <TabPanel>
