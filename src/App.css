@@ -74,14 +74,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin-top: 35px;
+
 
 }
 .searchbtn {
   background-color: black;
   border-radius: 2px;
- padding:8px;
- margin: 3px;
+ 
   color: white;
   width: 100px;
 
@@ -125,22 +125,27 @@ body {
 .ww {
   height: 10;
   position: relative;
-  margin-left: 94px;
-  margin-top:17px;
-  padding: 30px;
+  margin-left: 77px;
+  margin-top:13px;
+  padding: 26px;
 }
-
+.wew{
+  padding: 10px;
+  
+}
 .h22 {
   text-align: center;
   margin-top: 130px;
   margin-bottom:5px;
-  padding: 10px;
-  margin-right: 160px;
+  padding-right: 110px;
+ 
 }
 
 .h222 {
-  width: 300px;
+  width: 250px;
   position: absolute;
+  margin-bottom: 5px;
+
 }
 
 
@@ -322,6 +327,7 @@ h1 {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 10px;
 }
+
 .imooo{height: auto;
   width:auto;
   margin: 5px;
@@ -331,7 +337,7 @@ h1 {
   justify-content: space-around;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
-}
+}dd
 .logform{
   background-color: #baccd07a;
   margin-top: 10%;
@@ -355,7 +361,7 @@ h1 {
 .ssf{
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin: 20px;
-  height:275px;
+  height:auto;
   display: flex;
   justify-content: center;
  
@@ -401,7 +407,10 @@ h1 {
 }
 
 .navbar {
-  background-color: rgb(89 173 205);
+  background-color: rgb(102 168 243);
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
 }
 .soon{
   font-family: 'pacifico';
@@ -564,6 +573,9 @@ body{
   padding: 30px;
   margin: 50px;
   height:auto;
+}
+.ddda{
+  height: auto;
 }
 
 .ddds{
@@ -801,11 +813,6 @@ button:hover, a:hover {
   padding: 0;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-}
 
 
 .ddd {
@@ -1481,6 +1488,7 @@ text-decoration: none;
 color: black;
 }
 
+
 .starin{
   display: none;
 }
@@ -1949,4 +1957,18 @@ input[type="date"] {
   text-align: center;
   background-color: rgb(102, 168, 243);
  padding: 10px;
+}
+
+.aas{
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  height: 40px;
+}
+.sss{
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  margin-left: 30%;
+  margin-top: 10%;
 }

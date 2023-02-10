@@ -14,7 +14,6 @@ const AddProduct = () => {
   const [image, setimage] = useState("");
   const [price, setprice] = useState("");
   const [mobile, setmobile] = useState("");
-
   const [user, setuser] = useState([]);
   const [select, setselect] = useState("");
 
@@ -34,6 +33,7 @@ const AddProduct = () => {
       image: image,
       uid: user.uid,
     });
+    
     db.collection("Category")
       .doc("6qJKByoZ3ETb0q9gbkXc")
       .collection(select)

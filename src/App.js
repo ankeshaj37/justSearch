@@ -68,7 +68,6 @@ function App() {
               <Route path="/Leads" element={<Leads />} />
               <Route path="/Setting" element={<Setting />} />
               <Route path="/CategoryHome" element={<CategoryHome />} />
-
               <Route path="/services/1" element={<AirTickets />} />
               <Route path="/services/2" element={<AutoMobile />} />
               <Route path="/services/3" element={<BookHotel />} />

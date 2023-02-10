@@ -18,18 +18,24 @@ const Home = () => {
 
   return (
     <>
-      <div className="h22">
+    
+      <div className="container">
+        <div className=" wew row">
+        <div className="h22">
         <img
           className="h222"
           src="https://res.cloudinary.com/djxhucsls/image/upload/v1673324293/aaaaaaaaaaaa_p8yh1t.png"
         />
         <div className=" ww spinner-border text-warning" role="status"></div>
       </div>
-      <div className="inbox">
+        <div className="inbox">
         <input className="sdd" onChange={(e) => setsearch(e.target.value)} />
 
         <button className="searchbtn">Search</button>
       </div>
+        </div>
+      </div>
+      
       <h5 className="soo">Get ready! Something really cool is coming!</h5>
      
 
@@ -39,8 +45,8 @@ const Home = () => {
             if (search === "") {
               return "";
             } else if (
-              e.data.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
-            ) {
+              e.data.title.toLowerCase().indexOf(search.toLowerCase()) !== -1 )
+           {
               return e;
             }
           })
@@ -48,7 +54,7 @@ const Home = () => {
             <>
              
 
-              <div className=" container">
+              <div className=" ddda container">
                 <div className=" ssf row">
                   <div className="col-lg-6">
                     <img className="imoo" src={e.data.image} />

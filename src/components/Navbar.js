@@ -2,6 +2,7 @@
 import { Avatar } from '@mui/material'
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+
 import {  onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from './firebase';
 
@@ -36,7 +37,8 @@ const [first, setfirst] = useState('')
             </div>
           </div>
           <div className=" sudiv col-6">
-          {first? <Link className='avtar' to='/' onClick={log}><Avatar/><h6 className='logname'>Logout</h6></Link> :  <Link className='avtar' to='/login'><Avatar/><h6 className='logname'>Login</h6></Link>}
+          {first? <Link className='avtar' to='/' onClick={log}><Avatar/><h6 className='logname'>sign out</h6></Link> : 
+           <Link className='avtar' to='/login'><Avatar/><h6 className='logname'>sign in</h6></Link>}
           
             <button className=" tog navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span className="navbar-toggler-icon"></span>
