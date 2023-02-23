@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth, db } from "../components/firebase";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { onAuthStateChanged } from "firebase/auth";
 
 
 const ViewData = () => {
+  const navigate = useNavigate()
 
   const [User, setUser] = useState([]);
   const [first, setfirst] = useState([]);
@@ -29,6 +30,10 @@ const ViewData = () => {
     );
   }, []);
 
+  const form =()=>{
+    navigate('/enquiry')
+  }
+
   return (
     <>
       <div>
@@ -45,7 +50,7 @@ const ViewData = () => {
                 <h3 className="webtitle">{e.title}</h3>
               </div>
 
-              <div className="wsr container text-center">
+              <div className=" container ">
 
                 <Tabs>
                   <TabList>
@@ -66,7 +71,7 @@ const ViewData = () => {
                           <div className=" cardss row">
                             <div className=" imaggg col-lg-6">
                               <img
-                                className="imagesd"
+                                className="imoo"
                                 src={e.data.image}
                               />
                             </div>
@@ -84,11 +89,13 @@ const ViewData = () => {
 
                               <div>
                                 <h5>
-                                  {e.data.price}
+                                ₹ {e.data.price}
                                 </h5>
                               </div>
-                              <Link to={"tel:" + e.data.numb}> <button>Call</button> </Link>
-
+                              <div className=' imooo '>
+                                <button>Call</button>
+                                <button onClick={form }>Inquiry</button>
+                              </div>
                             </div>
                           </div>
                         </div>

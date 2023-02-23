@@ -62,31 +62,10 @@ const Home = () => {
                   <div className="imoos col-lg-6">
                     <h4>{e.data.title}</h4>
                     <p className="detai">{e.data.details}</p>
-                    <div className=" imooo ">
-                  <button className="buuut"><a className="anker" href={"tel:" + e.data.mobile}>Call Now</a></button>
+                   
                 <Link to={`/services/${e.uid}`}  > <button>Best Deal</button></Link>
-                    </div>
-                    <div className=" ress">
-                        {[...Array(5)].map((star, i) => {
-                          const ratess = i + 1;
-                          return (
-                            <label>
-                              <input
-                                className="starin"
-                                type="radio"
-                                name="rating"
-                                onClick={() => setrating(ratess)}
-                              />
-                              <FaStar
-                                color={i++ < rating ? "orange" : "gray"}
-                                className="star"
-                                size={20}
-                              />
-                            </label>
-                          );
-                        })}
-                        
-                      </div>
+                  
+                   
                   </div>
                 </div>
               </div>

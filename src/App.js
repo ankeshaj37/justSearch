@@ -40,6 +40,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import UserWeb from "./components/UserWeb";
 import Footer from "./components/Footer";
 import ViewData from "./components/ViewData";
+import EnquiryForm from "./components/EnquiryForm";
 
 
 function App() {
@@ -93,6 +94,7 @@ function App() {
               <Route path="/services/23" element={<Programming />} />
               <Route path="/services/24" element={<Wedding />} />
               <Route path="/web" element={<UserWeb />} />
+              <Route path="/enquiry" element={<EnquiryForm />} />
             </>
           ) : (
             <>
@@ -130,6 +132,7 @@ function App() {
               <Route path="/CategoryHome" element={<CategoryHome />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/Signup" element={<Signup />} />
+              <Route path="/enquiry" element={<EnquiryForm />} />
             </>
           )}
         </Routes>

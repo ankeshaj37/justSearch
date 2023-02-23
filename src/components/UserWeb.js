@@ -16,7 +16,7 @@ const UserWeb = () => {
   const [link, setlink] = useState('')
   const [numb, setnumb] = useState('')
   const [data, setdata] = useState([])
-  
+
 
   const [User, setUser] = useState([]);
 
@@ -24,15 +24,15 @@ const UserWeb = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-        setUser(user)
+      setUser(user)
     });
-}, [])
+  }, [])
 
   const publish = () => {
     db.collection('userweb').add({ title: title, background: background, logo: logo, about: about, link: link, numb: numb })
 
   }
-  
+
   const update = () => {
     db.collection('userweb').doc('K1WxR32QAwEhZrW440r3').update({ title: title, background: background, logo: logo, about: about, link: link, numb: numb })
 
@@ -50,20 +50,16 @@ const UserWeb = () => {
       {data.map((e) => (
         <>
           <div className=' container'>
-            <div className='logdivv'>
-              <img className='logoavta' src={e.data.background} />
-              <div className='imff'>
-                <img className='imffs' src={e.logo} />
+            <div >
+              <img className="logoavta" src={e.data.background} />
+              <div className="boxxe">
+                <div className="logoo">
+                  <img className="logoop" src={e.data.logo}></img>
+                </div>
               </div>
-
+              <h3 className="webtitle">{e.data.title}</h3>
             </div>
-            <h3>{e.data.title}</h3>
-
             <div className="wsr container-fluid text-center">
-              {/* <div><Link className='minlink'>Totale services</Link></div>
-   <div> <Link className='minlink'> Reviews</Link></div>
-   <div><Link className='minlink'> About us</Link></div>
-   <div><Link className='minlink'> Contact us</Link></div> */}
               <Tabs>
                 <TabList>
                   <Tab>Totale services</Tab>
@@ -72,7 +68,6 @@ const UserWeb = () => {
                   <Tab>Contact us</Tab>
                   <Tab>Website Link</Tab>
                 </TabList>
-
                 <TabPanel>
                   <p>services</p>
                 </TabPanel>
@@ -110,16 +105,13 @@ const UserWeb = () => {
                   <div class="col-2">
                     <div class="input-group-desc">
                       <input class="input--style-5" placeholder="Title" type="text" name="first_name" value={title} onChange={(e) => settitle(e.target.value)} />
-
                     </div>
                   </div>
                   <div class="col-2">
                     <div class="input-group-desc">
                       <input class="input--style-5" placeholder="Image Background" type="text" name="last_name" value={background} onChange={(e) => setbackground(e.target.value)} />
-
                     </div>
                   </div>
-
                 </div><p></p><br />
                 <div class="form-row">
                   <div class="input-group">
@@ -146,15 +138,11 @@ const UserWeb = () => {
                       <input class="input--style-5" placeholder="Mobail" type="text" name="last_name" value={numb} onChange={(e) => setnumb(e.target.value)} />
                     </div>
                   </div>
-
                 </div><p></p><br />
-
                 <div>
-                  
-                   <Link className="linku" onClick={update}><div className="buttp">update</div></Link>
-        <br/>
-                <Link className="linku" onClick={publish}><div className="buttp">publish</div></Link>
-    
+                  <Link className="linku" onClick={update}><div className="buttp">update</div></Link>
+                  <br />
+                  <Link className="linku" onClick={publish}><div className="buttp">publish</div></Link>
                 </div>
               </form>
             </div>

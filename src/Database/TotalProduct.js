@@ -14,8 +14,7 @@ const TotalProduct = () => {
     const [first, setfirst] = useState([])
     const [user, setUser] = useState("")
     const [title, settitle] = useState("")
-    const [updol, setupdol] = useState("")
-   
+  
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -40,17 +39,8 @@ const TotalProduct = () => {
     return (
         <>
             <Dmenus />
-            {first.map((e)=>(
-                <>
-             <div className='sss'>
-             <input onChang={e.data.title} value={updol} className='aas'/>
-            <button>update</button>
-            </div>
-                </>
-            ))}
-           <div>
-           <input onChange={(e)=>settitle(e.target.value)}/>
-           </div>
+           
+
            {first
                 .map((e) => (
                     <>
